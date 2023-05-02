@@ -7,14 +7,17 @@ const id = document.querySelector("#id"),
 loginBtn.addEventListener("click", login);
 
 
-function login(){
+function login() {
     const req = {
-        id : id.value,
-        pwd : pwd.value,
-    };
-    console.log(req);
-    console.log(JSON.stringify(req));
-    //fetch("/login", {
-   //     body: JSON.stringify(req)  //stringify : object를 문자열로 바꿔주는 메서드
-   // });
+        id: id.value,
+        psword: pwd.value,
+      };
+    
+      fetch("/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(req),
+      });
 }
