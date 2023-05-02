@@ -13,4 +13,8 @@ function login(){
         pwd : pwd.value,
     };
     console.log(req);
+    console.log(JSON.stringify(req));
+    //fetch("/login", {
+   //     body: JSON.stringify(req)  //stringify : object를 문자열로 바꿔주는 메서드
+   // });
 }
