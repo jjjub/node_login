@@ -10,7 +10,7 @@ loginBtn.addEventListener("click", login);
 function login() {
     const req = {
         id: id.value,
-        psword: pwd.value,
+        pwd: pwd.value,
       };
     
       fetch("/login", {
@@ -19,5 +19,7 @@ function login() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(req),
-      });
+      })
+      .then((res)=> res.json())
+      .then(console.log);
 }
