@@ -1,6 +1,8 @@
 "use strict";
 const User = require("../../models/User");
 
+const server = require("../../../app")
+
 const output ={
     home : (req, res) => {
         res.render("home/index");
@@ -15,7 +17,6 @@ const output ={
     },
 };
 
-
 const process = {
     login: async (req, res) => {
         const user = new User(req.body);
@@ -28,7 +29,6 @@ const process = {
         return res.json(response);
     },
 };
-
 
 module.exports = {
     output,

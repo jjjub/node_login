@@ -1,0 +1,26 @@
+.chat{
+    float : right;
+    margin-right: 60;
+    background-color: #222020;
+  }
+  .chat_box{
+    width : 80%;
+    height : 20%;
+    background-color: rgb(250, 252, 252);
+    border: solid black;
+  }
+  .btn{
+    width : 20%;
+    line-height: 70%;
+    float : buttom right;
+  }
+.video{
+    width : 80%;
+    height : 70%;
+   margin-left: 20px;
+  }
+.container{
+    background: rgba(36,36,36,1);
+    position: relative;
+  
+}

@@ -1,8 +1,16 @@
 "use strict";
 
-const app = require("../app");
+
+const server = require("../app");
 const PORT = 3000; 
 
-app.listen(PORT, () => {
-    console.log("서버 가동");
+
+// const server = app.listen(PORT, function(){
+//     console.log(PORT + "에서 가동 중");
+// });
+
+
+
+server.listen(PORT, () => {
+    console.log(PORT+"번 포트에서 서버 가동");
 });

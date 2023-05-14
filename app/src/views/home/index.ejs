@@ -2,11 +2,32 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/home/streaming.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>비디오</title>
 </head>
-<body>
-    <video id="videoPlayer" with="1280" height="720" controls autoplay>
-        <video src="/video" type="video/mp4">
-    </video></body>
+<body bgcolor=" #222020">
+    
+    <div class="wrapper">
+        <div class="user-container">
+            대화명 : <input type="text" id="nickname">
+        </div>
+        <div class="display-container">
+            <ul class="chatting-list"></ul>
+        </div>
+        <div class="input-container">
+            <input type="text" class="chatting-input">
+            <button class="send-button">전송</button>
+        </div>
+    </div>
+        <!-- <div class ="chat">
+            <div class ="chat-box">
+            <button type="send" id="button_send" class="btn">보내기</button>
+        </div>
+        </div> -->
+<script src="/socket.io/socket.io.js"></script>   
+<script src="/js/home/chat.js"></script>
+        
+</body>
 </html>
