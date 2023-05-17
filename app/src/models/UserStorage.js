@@ -4,14 +4,11 @@ const { json } = require("body-parser");
 const db = require("../config/db.js");
 
 class UserStorage{
-    static getUsers (isAll, ...fields) { }
-    
     static getUserInfo(id) {
         return new Promise((resolve, reject) =>{ // 성공시  resolve 실패시 reject
             const query = "select * from users where id = ?;";
             db.query(query,[id], (err, data) => {
                 if (err) reject(err);
-                
                 resolve(data[0]);
             });
         });        

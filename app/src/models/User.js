@@ -13,8 +13,12 @@ class User{
        const user = await UserStorage.getUserInfo(client.id);
 
        if (user) {
-        if (user.id === client.id && user.pwd === client.pwd) {
+        if (user.id === client.id && user.pwd === client.pwd) {  //로그인 성공시 success 리턴
             return { success: true };
+            // if (success = true){
+            //     app.post('User'.at)
+            // }
+
         }
         return {success: false, msg: "비밀번호가 틀렸습니다." };
        }

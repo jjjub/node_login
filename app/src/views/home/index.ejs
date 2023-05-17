@@ -7,27 +7,39 @@
     
     <title>비디오</title>
 </head>
-<body bgcolor=" #222020">
-    
+<body>
+    <!-- <div class="streaming-wrapper">
+        <div class="video-container">
+            <video autoplay controls loop muted poster="aaa" preload="bbb">
+                <source src="xxx" type="yyy">
+              </video>
+        </div> -->
     <div class="wrapper">
         <div class="user-container">
-            대화명 : <input type="text" id="nickname">
+            <label for="nickname">대화명</label>
+            <input type="text" id="nickname">
         </div>
         <div class="display-container">
-            <ul class="chatting-list"></ul>
+            <ul class="chatting-list">
+            
+            </ul>
         </div>
         <div class="input-container">
-            <input type="text" class="chatting-input">
-            <button class="send-button">전송</button>
+            <span>
+                <input type="text" class="chatting-input">
+                <button class="send-button">전송</button>
+            </span>
         </div>
     </div>
+
+
         <!-- <div class ="chat">
             <div class ="chat-box">
             <button type="send" id="button_send" class="btn">보내기</button>
         </div>
         </div> -->
-<script src="/socket.io/socket.io.js"></script>   
-<script src="/js/home/chat.js"></script>
+    <script src="/socket.io/socket.io.js"></script>   
+    <script src="/js/home/chat.js"></script>
         
 </body>
 </html>
